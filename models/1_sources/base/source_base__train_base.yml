@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: source_base__train_base
+    columns:
+      - name: case_id
+        tests:
+          - unique
+          - not_null
