@@ -10,11 +10,14 @@ with source as (
           {{ dbt_utils.generate_surrogate_key(['s.case_id', 's.num_group1']) }} as case_group_apply_prev_1_key
         , s.case_id
         , s.num_group1 as num_group_1
+        , s.approvaldate_319D as approval_date
+        , s.status_219L as prev_apply_status
         , s.actualdpd_943P as actual_days_past_due_of_prev_contract
+        , s.annuity_853A as monthly_annuity
+
+        , nvl2(s.approvaldate_319D, 1, 0)::boolean as was_approved
 
 /*
-    , annuity_853A NUMBER(38, 2)
-    , approvaldate_319D DATE
     , byoccupationinc_3656910L NUMBER(38, 2)
     , cancelreason_3545846M VARCHAR(36)
     , childnum_21L NUMBER(38, 2)
@@ -49,7 +52,7 @@ with source as (
     , rejectreason_755M	VARCHAR(36)
     , rejectreasonclient_4145042M VARCHAR(36)
     , revolvingaccount_394A	NUMBER(38, 2)
-    , status_219L VARCHAR(36)
+
     , tenor_203L NUMBER(38, 2)
 
 */
