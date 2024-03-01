@@ -17,18 +17,20 @@ with source as (
         , s.dtlastpmtallstes_3545839D as last_payment_date_all
         , s.employedfrom_700D as employed_from_date
         , s.status_219L as prev_apply_status
+        , s.cancelreason_3545846M as applicant_cancel_reason
+
+        , s.byoccupationinc_3656910L as applicant_occupation_income
         , s.actualdpd_943P as actual_days_past_due_of_prev_contract
         , s.annuity_853A as monthly_annuity
         , s.currdebt_94A as current_debt_amount
         , s.downpmt_134A as down_payment_amount
 
+        , s.childnum_21L as applicant_children_count
+
         , nvl2(s.approvaldate_319D, 1, 0)::boolean as was_approved
         , nvl2(s.dateactivated_425D, 1, 0)::boolean as was_contract_activated
 
 /*
-    , byoccupationinc_3656910L NUMBER(38, 2)
-    , cancelreason_3545846M VARCHAR(36)
-    , childnum_21L NUMBER(38, 2)
 
     , credacc_actualbalance_314A NUMBER(38, 2)
     , credacc_credlmt_575A NUMBER(38, 2)
