@@ -15,6 +15,7 @@ with source as (
         , s.dateactivated_425D as contract_activation_date
         , s.dtlastpmt_581D as last_payment_date
         , s.dtlastpmtallstes_3545839D as last_payment_date_all
+        , s.employedfrom_700D as employed_from_date
         , s.status_219L as prev_apply_status
         , s.actualdpd_943P as actual_days_past_due_of_prev_contract
         , s.annuity_853A as monthly_annuity
@@ -41,7 +42,7 @@ with source as (
     , downpmt_134A NUMBER(38, 2)
 
     , education_1138M VARCHAR(36)
-    , employedfrom_700D DATE
+
     , familystate_726L VARCHAR(36)
     , firstnonzeroinstldate_307D DATE
     , inittransactioncode_279L VARCHAR(36)
