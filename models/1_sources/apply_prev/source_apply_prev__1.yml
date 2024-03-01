@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: source_apply_prev__1
+    columns:
+      - name: case_group_apply_prev_1_key
+        tests:
+          - unique
+          - not_null
