@@ -19,6 +19,8 @@ with source as (
         , s.status_219L as prev_apply_status
         , s.actualdpd_943P as actual_days_past_due_of_prev_contract
         , s.annuity_853A as monthly_annuity
+        , s.currdebt_94A as current_debt_amount
+        , s.downpmt_134A as down_payment_amount
 
         , nvl2(s.approvaldate_319D, 1, 0)::boolean as was_approved
         , nvl2(s.dateactivated_425D, 1, 0)::boolean as was_contract_activated
@@ -36,10 +38,8 @@ with source as (
     , credacc_transactions_402L	NUMBER(38, 2)
     , credamount_590A NUMBER(38, 2)
     , credtype_587L VARCHAR(36)
-    , currdebt_94A NUMBER(38, 2)
 
     , district_544M VARCHAR(36)
-    , downpmt_134A NUMBER(38, 2)
 
     , education_1138M VARCHAR(36)
 
