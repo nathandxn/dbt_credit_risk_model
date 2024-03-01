@@ -7,7 +7,8 @@ with source as (
 , stg as (
 
     select
-          s.case_id
+          {{ dbt_utils.generate_surrogate_key(['s.case_id', 's.num_group1']) }} as case_group_apply_prev_1_key
+        , s.case_id
         , s.num_group1 as num_group_1
         , s.actualdpd_943P as actual_days_past_due_of_prev_contract
 
