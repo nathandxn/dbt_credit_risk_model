@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: apply_prev
+    database: raw_dw
+    schema: public
+
+    tables:
+      - name: train_applprev_1_0
+      - name: train_applprev_1_1
