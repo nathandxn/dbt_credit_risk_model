@@ -36,6 +36,8 @@ models:
         - "sources"
         
       apply_prev:
+        stg:
+          materialized: ephemeral
         +materialized: view
       base:
         stg:
