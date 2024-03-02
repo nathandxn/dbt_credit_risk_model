@@ -1,6 +1,7 @@
 {{ 
     config(
-          materialized='table'
+          materialized='table',
+          cluster_by=['model_group', 'case_id', 'num_group_1']
         ) 
     }}
 
