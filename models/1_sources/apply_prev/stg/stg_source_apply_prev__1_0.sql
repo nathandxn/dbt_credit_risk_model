@@ -13,6 +13,7 @@ with source as (
         , s.approvaldate_319D as approval_date
         , s.creationdate_885D as created_date
         , s.dateactivated_425D as contract_activation_date
+        , s.firstnonzeroinstldate_307D as first_installment_date
         , s.dtlastpmt_581D as last_payment_date
         , s.dtlastpmtallstes_3545839D as last_payment_date_all
         , s.employedfrom_700D as employed_from_date
@@ -20,7 +21,10 @@ with source as (
         , s.credtype_587L as credit_type
         , s.credacc_status_367L as prev_credit_account_status
         , s.cancelreason_3545846M as applicant_cancel_reason
+        , s.inittransactioncode_279L as initial_transaction_code
         , s.district_544M as district_of_applicant_address
+        , s.education_1138M as applicant_education_level
+        , s.familystate_726L as applicant_family_state
         
         , s.credamount_590A as loan_amount_or_card_limit
         , s.credacc_transactions_402L as count_transactions_prev_credit_account
@@ -37,20 +41,14 @@ with source as (
 
         , s.childnum_21L as applicant_children_count
 
+        , s.isbidproduct_390L as is_cross_sell_product
+        , s.isdebitcard_527L as is_debit_card
+
         , nvl2(s.approvaldate_319D, 1, 0)::boolean as was_approved
         , nvl2(s.dateactivated_425D, 1, 0)::boolean as was_contract_activated
 
 /*
 
-    ,  VARCHAR(36)
-
-    , education_1138M VARCHAR(36)
-
-    , familystate_726L VARCHAR(36)
-    , firstnonzeroinstldate_307D DATE
-    , inittransactioncode_279L VARCHAR(36)
-    , isbidproduct_390L	BOOLEAN
-    , isdebitcard_527L BOOLEAN
     , mainoccupationinc_437A NUMBER(38, 2)
     , maxdpdtolerance_577P NUMBER(38, 2)
     , outstandingdebt_522A NUMBER(38, 2)
