@@ -17,9 +17,11 @@ with source as (
         , s.dtlastpmtallstes_3545839D as last_payment_date_all
         , s.employedfrom_700D as employed_from_date
         , s.status_219L as prev_apply_status
+        , s.credtype_587L as credit_type
         , s.credacc_status_367L as prev_credit_account_status
         , s.cancelreason_3545846M as applicant_cancel_reason
         
+        , s.credamount_590A as loan_amount_or_card_limit
         , s.credacc_transactions_402L as count_transactions_prev_credit_account
         , s.credacc_actualbalance_314A as actual_balance_on_credit_account
         , s.credacc_credlmt_575A as credit_card_limit_prev_application
@@ -38,11 +40,6 @@ with source as (
         , nvl2(s.dateactivated_425D, 1, 0)::boolean as was_contract_activated
 
 /*
-
-
-
-    , credamount_590A NUMBER(38, 2)
-    , credtype_587L VARCHAR(36)
 
     , district_544M VARCHAR(36)
 
