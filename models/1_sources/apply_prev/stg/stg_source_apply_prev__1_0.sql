@@ -24,8 +24,13 @@ with source as (
         , s.inittransactioncode_279L as initial_transaction_code
         , s.district_544M as district_of_applicant_address
         , s.education_1138M as applicant_education_level
+        , s.profession_152M as applicant_profession
         , s.familystate_726L as applicant_family_state
-        
+        , s.postype_4733339M as type_of_point_of_sale
+
+        , s.pmtnum_8L as count_payments_made
+        , s.maxdpdtolerance_577P as max_days_past_due
+        , s.outstandingdebt_522A as amount_outstanding_debt
         , s.credamount_590A as loan_amount_or_card_limit
         , s.credacc_transactions_402L as count_transactions_prev_credit_account
         , s.credacc_actualbalance_314A as actual_balance_on_credit_account
@@ -33,6 +38,7 @@ with source as (
         , s.credacc_maxhisbal_375A as max_historical_balance
         , s.credacc_minhisbal_90A as min_historical_balance
 
+        , s.mainoccupationinc_437A as client_main_income_amount
         , s.byoccupationinc_3656910L as applicant_occupation_income
         , s.actualdpd_943P as actual_days_past_due_of_prev_contract
         , s.annuity_853A as monthly_annuity
@@ -49,14 +55,10 @@ with source as (
 
 /*
 
-    , mainoccupationinc_437A NUMBER(38, 2)
-    , maxdpdtolerance_577P NUMBER(38, 2)
-    , outstandingdebt_522A NUMBER(38, 2)
-    , pmtnum_8L NUMBER(38, 2)
-    , postype_4733339M VARCHAR(36)
-    , profession_152M VARCHAR(36)	
+
     , rejectreason_755M	VARCHAR(36)
     , rejectreasonclient_4145042M VARCHAR(36)
+
     , revolvingaccount_394A	NUMBER(38, 2)
 
     , tenor_203L NUMBER(38, 2)
