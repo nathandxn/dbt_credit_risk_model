@@ -18,6 +18,11 @@ with source as (
         , s.employedfrom_700D as employed_from_date
         , s.status_219L as prev_apply_status
         , s.cancelreason_3545846M as applicant_cancel_reason
+        
+        , s.credacc_actualbalance_314A as actual_balance_on_credit_account
+        , s.credacc_credlmt_575A as credit_card_limit_prev_application
+        , s.credacc_maxhisbal_375A as max_historical_balance
+        , s.credacc_minhisbal_90A as min_historical_balance
 
         , s.byoccupationinc_3656910L as applicant_occupation_income
         , s.actualdpd_943P as actual_days_past_due_of_prev_contract
@@ -32,10 +37,7 @@ with source as (
 
 /*
 
-    , credacc_actualbalance_314A NUMBER(38, 2)
-    , credacc_credlmt_575A NUMBER(38, 2)
-    , credacc_maxhisbal_375A NUMBER(38, 2)
-    , credacc_minhisbal_90A	NUMBER(38, 2)
+
     , credacc_status_367L VARCHAR(36)
     , credacc_transactions_402L	NUMBER(38, 2)
     , credamount_590A NUMBER(38, 2)
