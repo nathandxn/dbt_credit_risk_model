@@ -20,6 +20,7 @@ with source as (
         , s.credacc_status_367L as prev_credit_account_status
         , s.cancelreason_3545846M as applicant_cancel_reason
         
+        , s.credacc_transactions_402L as count_transactions_prev_credit_account
         , s.credacc_actualbalance_314A as actual_balance_on_credit_account
         , s.credacc_credlmt_575A as credit_card_limit_prev_application
         , s.credacc_maxhisbal_375A as max_historical_balance
@@ -39,8 +40,7 @@ with source as (
 /*
 
 
-    ,  VARCHAR(36)
-    , credacc_transactions_402L	NUMBER(38, 2)
+
     , credamount_590A NUMBER(38, 2)
     , credtype_587L VARCHAR(36)
 
