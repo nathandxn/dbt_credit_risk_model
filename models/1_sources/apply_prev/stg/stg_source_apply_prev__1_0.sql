@@ -7,8 +7,8 @@ with source as (
 , stg as (
 
     select
-          {{ dbt_utils.generate_surrogate_key(['s.case_id', 's.num_group1']) }} as case_group_apply_prev_1_key
-        , s.case_id
+          s.case_id
+        , 'train' as model_group
         , s.num_group1 as num_group_1
         , s.approvaldate_319D as approval_date
         , s.creationdate_885D as created_date
@@ -20,6 +20,7 @@ with source as (
         , s.credtype_587L as credit_type
         , s.credacc_status_367L as prev_credit_account_status
         , s.cancelreason_3545846M as applicant_cancel_reason
+        , s.district_544M as district_of_applicant_address
         
         , s.credamount_590A as loan_amount_or_card_limit
         , s.credacc_transactions_402L as count_transactions_prev_credit_account
@@ -41,7 +42,7 @@ with source as (
 
 /*
 
-    , district_544M VARCHAR(36)
+    ,  VARCHAR(36)
 
     , education_1138M VARCHAR(36)
 
@@ -68,4 +69,9 @@ with source as (
 
 )
 
-select * from stg
+select
+      {{ dbt_utils.generate_surrogate_key(['s.case_id', 's.model_group', 's.num_group_1']) }} as case_group_apply_prev_1_key
+    , {{ dbt_utils.generate_surrogate_key(['s.case_id', 's.model_group']) }} as case_model_group_key
+    , s.*
+
+from stg as s
