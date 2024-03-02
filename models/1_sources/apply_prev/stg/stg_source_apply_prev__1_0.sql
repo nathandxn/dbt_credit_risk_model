@@ -17,6 +17,7 @@ with source as (
         , s.dtlastpmtallstes_3545839D as last_payment_date_all
         , s.employedfrom_700D as employed_from_date
         , s.status_219L as prev_apply_status
+        , s.credacc_status_367L as prev_credit_account_status
         , s.cancelreason_3545846M as applicant_cancel_reason
         
         , s.credacc_actualbalance_314A as actual_balance_on_credit_account
@@ -38,7 +39,7 @@ with source as (
 /*
 
 
-    , credacc_status_367L VARCHAR(36)
+    ,  VARCHAR(36)
     , credacc_transactions_402L	NUMBER(38, 2)
     , credamount_590A NUMBER(38, 2)
     , credtype_587L VARCHAR(36)
