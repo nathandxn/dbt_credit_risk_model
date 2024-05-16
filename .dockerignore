@@ -1,0 +1,8 @@
+.git
+.gitignore
+.vscode
+Dockerfile
+Makefile
+dbt_packages
+logs
+target
