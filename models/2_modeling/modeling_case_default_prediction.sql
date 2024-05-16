@@ -45,6 +45,13 @@ with base as (
         , fs.avg_days_past_or_before_due_of_paymt_last_3_months as static_avg_days_past_or_before_due_of_paymt_last_3_months
         , fs.avg_days_past_or_before_due_of_paymt_last_24_months_with_tolerance as static_avg_days_past_or_before_due_of_paymt_last_24_months_with_tolerance
         , fs.avg_days_past_due_of_paymt_last_24_months_with_tolerance_from_max_close_date as static_avg_days_past_due_of_paymt_last_24_months_with_tolerance_from_max_close_date
+        , fs.avg_instals_paid_last_24_months as static_avg_instals_paid_last_24_months
+        , fs.avg_loan_amt_last_24_months as avg_loan_amt_last_24_months
+        , fs.avg_days_past_due_last_9_months as avg_days_past_due_last_9_months
+        , fs.avg_outstanding_bal_last_6_months as static_avg_outstanding_bal_last_6_months
+        , fs.avg_of_pays_made_last_12_months as static_avg_of_pays_made_last_12_months
+        , fs.type_of_bank_account as static_type_of_bank_account
+        , fs.type_of_credit_card as static_type_of_credit_card
 
     from base as b
     left join feat_static as fs
