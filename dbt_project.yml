@@ -43,3 +43,7 @@ models:
         stg:
           materialized: ephemeral
         +materialized: view
+      static:
+        stg:
+          materialized: ephemeral
+        +materialized: view

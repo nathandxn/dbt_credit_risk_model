@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: static
+    database: raw_dw
+    schema: public
+
+    tables:
+      - name: train_static_0_0
