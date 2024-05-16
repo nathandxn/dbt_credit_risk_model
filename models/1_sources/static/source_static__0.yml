@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: source_static__0
+    columns:
+      - name: case_id
+        tests:
+          - unique
+          - not_null
