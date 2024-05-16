@@ -6,6 +6,7 @@ authors = []
 
 [tool.poetry.dependencies]
 python = "^3.10.0"
+dbt-snowflake = "^1.8.0"
 
 [tool.poetry.dev-dependencies]
 [build-system]
