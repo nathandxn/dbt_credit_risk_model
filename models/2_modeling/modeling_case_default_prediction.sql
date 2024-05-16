@@ -55,6 +55,10 @@ with base as (
         , {{ prefix_column_name(column_name = 'count_clients_have_used_same_mobile_number_last_12_months', prefix = 'static', alias = 'fs') }}
         , {{ prefix_column_name(column_name = 'count_clients_have_used_same_mobile_number_last_3_months', prefix = 'static', alias = 'fs') }}
         , {{ prefix_column_name(column_name = 'count_clients_have_used_same_mobile_number_last_6_months', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_apply_match_employers_phone_and_clients', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_clients_share_same_mobile_phone', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_apply_match_client_alt_phone', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_apply_client_match_alt_phone', prefix = 'static', alias = 'fs') }}
 
     from base as b
     left join feat_static as fs

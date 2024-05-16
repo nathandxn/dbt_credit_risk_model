@@ -33,6 +33,10 @@ with source as (
         , s.clientscnt12m_3712952L as count_clients_have_used_same_mobile_number_last_12_months
         , s.clientscnt3m_3712950L as count_clients_have_used_same_mobile_number_last_3_months
         , s.clientscnt6m_3712949L as count_clients_have_used_same_mobile_number_last_6_months
+        , s.clientscnt_100L as count_apply_match_employers_phone_and_clients
+        , s.clientscnt_1022L as count_clients_share_same_mobile_phone
+        , s.clientscnt_1071L as count_apply_match_client_alt_phone
+        , s.clientscnt_1130L as count_apply_client_match_alt_phone
 
     from source as s
 
