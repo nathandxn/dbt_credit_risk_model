@@ -52,6 +52,9 @@ with base as (
         , fs.avg_of_pays_made_last_12_months as static_avg_of_pays_made_last_12_months
         , fs.type_of_bank_account as static_type_of_bank_account
         , fs.type_of_credit_card as static_type_of_credit_card
+        , {{ prefix_column_name(column_name = 'count_clients_have_used_same_mobile_number_last_12_months', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_clients_have_used_same_mobile_number_last_3_months', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_clients_have_used_same_mobile_number_last_6_months', prefix = 'static', alias = 'fs') }}
 
     from base as b
     left join feat_static as fs

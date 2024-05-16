@@ -30,6 +30,9 @@ with source as (
         , s.avgpmtlast12m_4525200A as avg_of_pays_made_last_12_months
         , s.bankacctype_710L as type_of_bank_account
         , s.cardtype_51L as type_of_credit_card
+        , s.clientscnt12m_3712952L as count_clients_have_used_same_mobile_number_last_12_months
+        , s.clientscnt3m_3712950L as count_clients_have_used_same_mobile_number_last_3_months
+        , s.clientscnt6m_3712949L as count_clients_have_used_same_mobile_number_last_6_months
 
     from source as s
 
