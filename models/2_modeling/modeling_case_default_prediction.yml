@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: modeling_case_default_prediction
+    columns:
+      - name: case_model_group_key
+        tests:
+          - unique
+          - not_null
