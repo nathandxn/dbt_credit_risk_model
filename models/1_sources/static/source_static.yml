@@ -7,3 +7,4 @@ sources:
 
     tables:
       - name: train_static_0_0
+      - name: train_static_0_1
