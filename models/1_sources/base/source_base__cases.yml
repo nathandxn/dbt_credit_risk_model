@@ -1,12 +1,18 @@
 version: 2
 
 models:
-  - name: source_base__train_base
+  - name: source_base__cases
     columns:
       - name: case_id
         tests:
           - unique
           - not_null
+
+      - name: model_group
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['train', 'test']
 
       - name: is_default
         tests:
