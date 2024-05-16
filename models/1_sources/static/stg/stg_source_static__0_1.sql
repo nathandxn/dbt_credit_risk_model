@@ -36,6 +36,7 @@ with source as (
 )
 
 select
-      s.*
+      {{ dbt_utils.generate_surrogate_key(['s.case_id', 's.model_group']) }} as case_model_group_key
+    , s.*
 
 from stg as s
