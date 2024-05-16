@@ -47,3 +47,10 @@ models:
         stg:
           materialized: ephemeral
         +materialized: view
+
+    2_modeling:
+      schema: modeling
+      +tags:
+        - "modeling"
+
+      materialized: table
