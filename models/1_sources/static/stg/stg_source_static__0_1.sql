@@ -37,6 +37,21 @@ with source as (
         , s.clientscnt_1022L as count_clients_share_same_mobile_phone
         , s.clientscnt_1071L as count_apply_match_client_alt_phone
         , s.clientscnt_1130L as count_apply_client_match_alt_phone
+        , s.clientscnt_136L as count_apply_match_client_email
+        , s.clientscnt_157L as count_clients_same_phone_number_as_client
+        , s.clientscnt_257L as count_clients_share_alt_phone_number
+        , s.clientscnt_304L as count_clients_same_phone_number
+        , s.clientscnt_360L as count_clients_same_alt_and_employer_phone_number
+        , s.clientscnt_493L as count_clients_match_phone_number_and_employer_phone_number
+        , s.clientscnt_533L as count_clients_same_phone_number_and_alt_phone_number
+        , s.clientscnt_887L as count_clients_same_employers_phone_number
+        , s.clientscnt_946L as count_clients_match_mobile_and_employers_phone_number
+        , s.cntincpaycont9m_3716944L as count_incoming_payments_last_9_months
+        , s.cntpmts24_3658933L as count_months_any_incoming_payments_last_24_months
+        , s.commnoinclast6m_3546845L as count_comms_indicating_low_income_last_6_months
+        , s.credamount_770A as loan_amount_or_card_limit
+        , s.credtype_322L as credit_type
+        , s.currdebt_22A as current_client_debt_amount
 
     from source as s
 

@@ -59,6 +59,21 @@ with base as (
         , {{ prefix_column_name(column_name = 'count_clients_share_same_mobile_phone', prefix = 'static', alias = 'fs') }}
         , {{ prefix_column_name(column_name = 'count_apply_match_client_alt_phone', prefix = 'static', alias = 'fs') }}
         , {{ prefix_column_name(column_name = 'count_apply_client_match_alt_phone', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_apply_match_client_email', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_clients_same_phone_number_as_client', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_clients_share_alt_phone_number', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_clients_same_phone_number', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_clients_same_alt_and_employer_phone_number', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_clients_match_phone_number_and_employer_phone_number', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_clients_same_phone_number_and_alt_phone_number', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_clients_same_employers_phone_number', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_clients_match_mobile_and_employers_phone_number', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_incoming_payments_last_9_months', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_months_any_incoming_payments_last_24_months', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_comms_indicating_low_income_last_6_months', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'loan_amount_or_card_limit', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'credit_type', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'current_client_debt_amount', prefix = 'static', alias = 'fs') }}
 
     from base as b
     left join feat_static as fs
