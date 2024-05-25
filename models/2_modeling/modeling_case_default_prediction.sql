@@ -74,6 +74,12 @@ with base as (
         , {{ prefix_column_name(column_name = 'loan_amount_or_card_limit', prefix = 'static', alias = 'fs') }}
         , {{ prefix_column_name(column_name = 'credit_type', prefix = 'static', alias = 'fs') }}
         , {{ prefix_column_name(column_name = 'current_client_debt_amount', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'current_debt_of_applicant', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_days_past_due_with_tolerance', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_deferred_months', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'disbursed_credit_amount_after_consolidation', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'disbursement_type', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'amount_downpayment', prefix = 'static', alias = 'fs') }}
 
     from base as b
     left join feat_static as fs

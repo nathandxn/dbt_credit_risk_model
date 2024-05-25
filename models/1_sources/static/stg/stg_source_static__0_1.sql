@@ -52,6 +52,15 @@ with source as (
         , s.credamount_770A as loan_amount_or_card_limit
         , s.credtype_322L as credit_type
         , s.currdebt_22A as current_client_debt_amount
+        , s.currdebtcredtyperange_828A as current_debt_of_applicant
+        , s.datefirstoffer_1144D
+        , s.datelastinstal40dpd_247D
+        , s.datelastunpaid_3546854D
+        , s.daysoverduetolerancedd_3976961L as count_days_past_due_with_tolerance
+        , s.deferredmnthsnum_166L as count_deferred_months
+        , s.disbursedcredamount_1113A as disbursed_credit_amount_after_consolidation
+        , s.disbursementtype_67L as disbursement_type
+        , s.downpmt_116A as amount_downpayment
 
     from source as s
 
