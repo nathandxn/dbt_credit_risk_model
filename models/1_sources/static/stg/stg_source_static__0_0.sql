@@ -61,6 +61,17 @@ with source as (
         , s.disbursedcredamount_1113A as disbursed_credit_amount_after_consolidation
         , s.disbursementtype_67L as disbursement_type
         , s.downpmt_116A as amount_downpayment
+        , s.dtlastpmtallstes_4499206D
+        , s.eir_270L as interest_rate
+        , s.equalitydataagreement_891L as has_sudden_changes_in_social_demographic_data
+        , s.equalityempfrom_62L as has_sudden_change_in_employment_length
+        , s.firstclxcampaign_1125D
+        , s.firstdatedue_489D
+        , s.homephncnt_628L as count_home_phone_numbers
+        , s.inittransactionamount_650A as amount_initial_transaction_of_apply
+        , s.inittransactioncode_186L as type_initial_transaction_of_apply
+        , s.interestrate_311L as interest_rate_of_active_credit_contract
+        , s.interestrategrace_34L as interest_rate_during_grace_period
 
     from source as s
 

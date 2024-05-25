@@ -80,6 +80,14 @@ with base as (
         , {{ prefix_column_name(column_name = 'disbursed_credit_amount_after_consolidation', prefix = 'static', alias = 'fs') }}
         , {{ prefix_column_name(column_name = 'disbursement_type', prefix = 'static', alias = 'fs') }}
         , {{ prefix_column_name(column_name = 'amount_downpayment', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'interest_rate', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'has_sudden_changes_in_social_demographic_data', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'has_sudden_change_in_employment_length', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'count_home_phone_numbers', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'amount_initial_transaction_of_apply', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'type_initial_transaction_of_apply', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'interest_rate_of_active_credit_contract', prefix = 'static', alias = 'fs') }}
+        , {{ prefix_column_name(column_name = 'interest_rate_during_grace_period', prefix = 'static', alias = 'fs') }}
 
     from base as b
     left join feat_static as fs
